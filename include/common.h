@@ -1,0 +1,45 @@
+#ifndef COMMON_H
+#define COMMON_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <errno.h>
+
+// Version
+#define PWM_VERSION "0.1.0"
+
+// ANSI color codes
+
+
+// Limits
+#define MAX_DOMAIN_LEN 256
+#define MAX_USERNAME_LEN 256
+#define MAX_PASSWORD_LEN 256
+#define MAX_COMMENT_LEN 512
+#define MAX_MASTER_PASSWORD_LEN 256
+#define DEFAULT_PASSWORD_LENGTH 24
+#define MAX_ENTRIES 1000
+
+// Master password policy configuration
+#define MIN_MASTER_PASSWORD_LEN 8           // Recommended minimum length
+#define ENFORCE_MASTER_PASSWORD_MIN false   // true = block, false = warn only
+
+// Error codes
+#define PWM_SUCCESS 0
+#define PWM_ERROR -1
+#define PWM_ERROR_INVALID_INPUT -2
+#define PWM_ERROR_NOT_FOUND -3
+#define PWM_ERROR_DUPLICATE -4
+#define PWM_ERROR_CRYPTO -5
+#define PWM_ERROR_FILE -6
+#define PWM_ERROR_PERMISSION -7
+#define PWM_ERROR_MEMORY -8
+
+// Database path
+#define DEFAULT_DB_PATH ".pwm.db"
+
+#endif /* COMMON_H */
+
