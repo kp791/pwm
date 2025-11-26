@@ -1,0 +1,41 @@
+# Build artifacts
+build/
+bin/
+*.o
+*.d
+*.a
+*.so
+
+# Test artifacts
+.test_*.db
+*.log
+
+# Database files
+.pwm.db
+*.db
+
+# Temporary files
+*.tmp
+*.tmp.*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Core dumps
+core
+core.*
+
+# Valgrind output
+vgcore.*
+massif.out.*
+
+# Coverage
+*.gcda
+*.gcno
+*.gcov
+coverage/
+
