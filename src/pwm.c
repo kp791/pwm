@@ -96,12 +96,11 @@ int main(int argc, char **argv) {
     
     // Check for --password-only flag (for piping)
     bool password_only = false;
-    if (opt_index < argc && (strcmp(argv[opt_index], "--password-only") == 0 || 
-                             strcmp(argv[opt_index], "-p") == 0)) {
-        password_only = true;
-        opt_index++;
-    }
-    
+	for (int i = 1; i < argc; i++) {
+		if (strcmp(argv[i], "-p") == 0 || strcmp(argv[i], "--password-only") == 0) {
+			password_only = true;
+		}
+	}
     if (strcmp(command, "init") == 0) {
         return cmd_init(db_path);
     } else if (strcmp(command, "add") == 0) {
